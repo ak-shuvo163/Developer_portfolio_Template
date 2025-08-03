@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify && cpx dist/output.css public/css/"
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify && cpx dist/output.css public/css/ && cpx src/js/** public/js/"
   },
   "keywords": [],
   "author": "",
