@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Developer Portfolio</title>
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <!-- Swiper CSS CDN -->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+     <!-- SwiperJS JS -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- AOS CSS for animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- TailwindCSS -->
+    <link rel="stylesheet" href="css/output.css" />
+
+    <!-- ✅ Dark mode init before anything else -->
+    <script src="js/darkmode.js"></script>
+  </head>
+
+  <body
+    class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-300"
+  >
+ 
+   <!-- Navbar Start -->
+   <header
+   class="shadow-md fixed top-0 left-0 w-full z-50 bg-white dark:bg-gray-800 transition-colors duration-300"
+ >
+   <div
+     class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center"
+   >
+     <h1 class="text-xl font-bold">DevPortfolio</h1>
+
+     <!-- Desktop Menu -->
+     <nav class="space-x-6 hidden md:flex">
+       <a href="index.html" class="nav-link hover:text-blue-600 transition">Home</a>
+       <a href="about.html" class="nav-link hover:text-blue-600 transition">About</a>
+       <a href="portfolio.html" class="nav-link hover:text-blue-600 transition">Portfolio</a>
+       <a href="services.html" class="nav-link hover:text-blue-600 transition">Services</a>
+       <a href="contact.html" class="nav-link hover:text-blue-600 transition">Contact</a>
+     </nav>
+
+     <!-- Dark Toggle & Hamburger -->
+     <div class="flex items-center space-x-4">
+       <button id="theme-toggle" class="text-2xl">
+         <i class="fa-regular fa-moon"></i>
+       </button>
+       <button id="menu-toggle" class="text-2xl md:hidden focus:outline-none">
+         <i class="fas fa-bars"></i>
+       </button>
+     </div>
+   </div>
+
+   <!-- Mobile Menu -->
+   <div
+     id="mobile-menu"
+     class="md:hidden hidden bg-white dark:bg-gray-800 px-4 pb-4 space-y-2 transition-all duration-300"
+   >
+     <a href="index.html" class="nav-link block hover:text-blue-600 transition">Home</a>
+     <a href="about.html" class="nav-link block hover:text-blue-600 transition">About</a>
+     <a href="portfolio.html" class="nav-link block hover:text-blue-600 transition">Portfolio</a>
+     <a href="services.html" class="nav-link block hover:text-blue-600 transition">Services</a>
+     <a href="contact.html" class="nav-link block hover:text-blue-600 transition">Contact</a>
+ </div>
+ </header>
+ <!-- Navbar End -->
+
+
+      <!-- Hero Section -->
+      <section
+      class="min-h-screen flex flex-col justify-center items-center bg-gradient-to-r from-blue-100 to-blue-300 dark:from-gray-900 dark:to-gray-800 text-gray-900 dark:text-white px-6 text-center"
+    >
+      <h1 class="text-5xl font-extrabold mb-4 sm:text-6xl md:text-7xl">
+        My <span class="text-blue-600 dark:text-blue-400">Services</span>
+      </h1>
+      <p class="max-w-3xl text-lg sm:text-xl md:text-2xl mb-8 font-medium">
+        Professional web development solutions tailored for Freelancers and Developers.<br />
+        Build your dream projects with clean, fast, and modern code.
+      </p>
+
+      <!-- Optional Illustration -->
+      <img
+        src="images/2-services-color.png"
+        alt="Services Illustration"
+        class="w-32 max-w-full mx-auto mb-8"
+      />
+       <!-- SVG Illustration -->
+
+      <!-- Call to Action Button -->
+      <a
+        href="#services-list"
+        class="inline-block bg-blue-600 text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:bg-blue-700 transition"
+      >
+        Explore Services
+      </a>
+    </section>
+
+    <!-- Services List -->
+    <section id="services-list" class="max-w-7xl mx-auto px-6 py-16 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+
+      <!-- Service Card 1 -->
+      <div
+        class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-2xl transition"
+      >
+        <div class="text-blue-600 mb-4 text-5xl text-center">
+          <i class="fa-solid fa-code"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2 text-center">Custom Web Development</h3>
+        <p class="text-gray-700 dark:text-gray-300 text-center">
+          Responsive, scalable websites tailored to your unique requirements with modern technologies.
+        </p>
+      </div>
+
+      <!-- Service Card 2 -->
+      <div
+        class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-2xl transition"
+      >
+        <div class="text-blue-600 mb-4 text-5xl text-center">
+          <i class="fa-brands fa-bootstrap"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2 text-center">Bootstrap & Tailwind CSS</h3>
+        <p class="text-gray-700 dark:text-gray-300 text-center">
+          Modern, mobile-first UI designs with the most popular CSS frameworks for stunning looks.
+        </p>
+      </div>
+
+      <!-- Service Card 3 -->
+      <div
+        class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-2xl transition"
+      >
+        <div class="text-blue-600 mb-4 text-5xl text-center">
+          <i class="fa-brands fa-js"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2 text-center">JavaScript Development</h3>
+        <p class="text-gray-700 dark:text-gray-300 text-center">
+          Interactive, dynamic front-end experiences using vanilla JS and popular frameworks.
+        </p>
+      </div>
+
+      <!-- Service Card 4 -->
+      <div
+        class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-2xl transition"
+      >
+        <div class="text-blue-600 mb-4 text-5xl text-center">
+          <i class="fa-brands fa-github"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2 text-center">Version Control & GitHub</h3>
+        <p class="text-gray-700 dark:text-gray-300 text-center">
+          Efficient code management and collaboration using Git and GitHub repositories.
+        </p>
+      </div>
+
+      <!-- Service Card 5 -->
+      <div
+        class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-2xl transition"
+      >
+        <div class="text-blue-600 mb-4 text-5xl text-center">
+          <i class="fa-brands fa-figma"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2 text-center">UI/UX Design & Prototyping</h3>
+        <p class="text-gray-700 dark:text-gray-300 text-center">
+          User-centered designs with smooth interfaces using Figma and modern design tools.
+        </p>
+      </div>
+
+      <!-- Service Card 6 -->
+      <div
+        class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-2xl transition"
+      >
+        <div class="text-blue-600 mb-4 text-5xl text-center">
+          <i class="fa-solid fa-mobile-screen-button"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2 text-center">Responsive & Mobile-first</h3>
+        <p class="text-gray-700 dark:text-gray-300 text-center">
+          Seamless experience across all devices with pixel-perfect responsive design.
+        </p>
+      </div>
+
+    </section>
+       
+       <!-- Footer -->
+<footer class="bg-gray-900 dark:bg-gray-800 text-white py-10 px-4 md:px-10">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
+      <div>
+        <h4 class="text-xl font-semibold mb-2">CanvasCode</h4>
+        <p class="text-gray-400">Professional Portfolio & Template Hub for Developers & Freelancers.</p>
+      </div>
+      <div>
+        <h4 class="text-xl font-semibold mb-2">Quick Links</h4>
+        <ul class="text-gray-400 space-y-2">
+            <li><a href="index.html" class="hover:text-white">Home</a></li>
+            <li><a href="about.html" class="hover:text-white">About</a></li>
+            <li><a href="portfolio.html" class="hover:text-white">Portfolio</a></li>
+          <li><a href="services.html" class="hover:text-white">Services</a></li>
+          <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-xl font-semibold mb-2">Connect</h4>
+        <p class="text-gray-400 mb-2">Email: yourmail@example.com</p>
+        <div class="flex justify-center md:justify-start gap-4 text-lg">
+          <a href="#" class="hover:text-blue-400"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="hover:text-blue-400"><i class="fab fa-github"></i></a>
+          <a href="#" class="hover:text-blue-400"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="text-center text-sm text-gray-500 mt-8">&copy; 2025 CanvasCode. Built with ❤️ for the modern web.</div>
+    <div id="datetime" class="text-center text-sm text-gray-400 mt-2"></div>
+  </footer>
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Swiper JS CDN (before </body>) -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
+
