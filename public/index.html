@@ -3,30 +3,76 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Developer Portfolio</title>
+      <!-- Primary Meta Tags -->
+  <title>CodeCrafter | Front-End Developer Portfolio</title>
+  <meta name="title" content="CodeCrafter | Front-End Developer Portfolio" />
+  <meta name="description" content="Professional front-end developer portfolio template with responsive design, dark mode, and project showcase. Built with HTML, Tailwind CSS, and JavaScript." />
+
+  <!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://developer-portfolio-tem-plate.netlify.app/" />
+<meta property="og:title" content="CodeCrafter | Front-End Developer Portfolio" />
+<meta property="og:description" content="Professional front-end developer portfolio template with responsive design, dark mode, and project showcase." />
+<meta property="og:image" content="https://developer-portfolio-tem-plate.netlify.app/assets/og-image.jpg" />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content="https://developer-portfolio-tem-plate.netlify.app/" />
+<meta property="twitter:title" content="CodeCrafter | Front-End Developer Portfolio" />
+<meta property="twitter:description" content="Professional front-end developer portfolio template with responsive design, dark mode, and project showcase." />
+<meta property="twitter:image" content="https://developer-portfolio-tem-plate.netlify.app/assets/og-image.jpg" />
+
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="http://developer-portfolio-tem-plate.netlify.app"/>
+
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
 
     <!-- Font Awesome CDN -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+   <noscript><link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  </noscript>
+
     <!-- Swiper CSS CDN -->
-    <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <!-- SwiperJS JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+     <noscript>
+      <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      />
+     </noscript>
 
 
     <!-- AOS CSS for animation -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="preload" href="https://unpkg.com/aos@2.3.4/dist/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+     <noscript><link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" /></noscript>
 
     <!-- TailwindCSS -->
-    <link rel="stylesheet" href="css/output.css" />
+      <link rel="stylesheet" href="css/output.css" />
 
     <!-- ✅ Dark mode init before anything else -->
-    <script src="js/darkmode.js"></script>
+    <script defer src="js/darkmode.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "CodeCrafter",
+        "url": "http://developer-portfolio-tem-plate.netlify.app",
+        "sameAs": [
+          "https://github.com/CodeCrafter",
+          "https://linkedin.com/in/CodeCrafter"
+        ],
+        "jobTitle": "Front-end Developer",
+        "image": "http://developer-portfolio-tem-plate.netlify.app/assets/profile.jpg",
+        "email": "mailto:your-email@example.com"
+      }
+      </script>
   </head>
 
   <body
@@ -43,19 +89,19 @@
 
         <!-- Desktop Menu -->
         <nav class="space-x-6 hidden md:flex">
-          <a href="index.html" class="nav-link hover:text-blue-600 transition">Home</a>
-          <a href="about.html" class="nav-link hover:text-blue-600 transition">About</a>
-          <a href="portfolio.html" class="nav-link hover:text-blue-600 transition">Portfolio</a>
-          <a href="services.html" class="nav-link hover:text-blue-600 transition">Services</a>
-          <a href="contact.html" class="nav-link hover:text-blue-600 transition">Contact</a>
+          <a href="index.html" class="nav-link hover:text-blue-600 transition" aria-label="Home">Home</a>
+          <a href="about.html" class="nav-link hover:text-blue-600 transition" aria-label="About">About</a>
+          <a href="portfolio.html" class="nav-link hover:text-blue-600 transition" aria-label="Portfolio">Portfolio</a>
+          <a href="services.html" class="nav-link hover:text-blue-600 transition" aria-label="Services">Services</a>
+          <a href="contact.html" class="nav-link hover:text-blue-600 transition" aria-label="Contact">Contact</a>
         </nav>
 
         <!-- Dark Toggle & Hamburger -->
         <div class="flex items-center space-x-4">
-          <button id="theme-toggle" class="text-2xl">
+          <button id="theme-toggle" class="text-2xl" aria-label="Toggle-theme">
             <i class="fa-regular fa-moon"></i>
           </button>
-          <button id="menu-toggle" class="text-2xl md:hidden focus:outline-none">
+          <button id="menu-toggle" class="text-2xl md:hidden focus:outline-none" aria-label="Toggle-menu">
             <i class="fas fa-bars"></i>
           </button>
         </div>
@@ -66,11 +112,11 @@
         id="mobile-menu"
         class="md:hidden hidden bg-white dark:bg-gray-800 px-4 pb-4 space-y-2 transition-all duration-300"
       >
-        <a href="index.html" class="nav-link block hover:text-blue-600 transition">Home</a>
-        <a href="about.html" class="nav-link block hover:text-blue-600 transition">About</a>
-        <a href="portfolio.html" class="nav-link block hover:text-blue-600 transition">Portfolio</a>
-        <a href="services.html" class="nav-link block hover:text-blue-600 transition">Services</a>
-        <a href="contact.html" class="nav-link block hover:text-blue-600 transition">Contact</a>
+        <a href="index.html" class="nav-link block hover:text-blue-600 transition" aria-label="Home">Home</a>
+        <a href="about.html" class="nav-link block hover:text-blue-600 transition" aria-label="About">About</a>
+        <a href="portfolio.html" class="nav-link block hover:text-blue-600 transition" aria-label="Portfolio">Portfolio</a>
+        <a href="services.html" class="nav-link block hover:text-blue-600 transition" aria-label="Services">Services</a>
+        <a href="contact.html" class="nav-link block hover:text-blue-600 transition" aria-label="Contact">Contact</a>
     </div>
     </header>
     <!-- Navbar End -->
@@ -84,12 +130,19 @@
   
     <div class="relative text-center max-w-2xl z-10">
       <!-- Profile Photo -->
-      <img
+       <picture>
+        <!-- WebP version -->
+        <source srcset="images/profile-image.webp" type="image/webp" />
+        <img
         src="images/profile-image.jpg"
-        alt="CodeCrafter"
+        alt="Developer profile photo"
         class="w-36 h-36 mx-auto mb-6 rounded-full border-4 border-blue-600 shadow-lg object-cover"
-        data-aos="zoom-in"
+        width="144"
+        height="144"
+        decoding="async"
+        fetchpriority="high"
       />
+       </picture>
   
       <!-- Headings -->
       <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-800 dark:text-white leading-tight mb-4">
@@ -104,23 +157,21 @@
         <a
           href="assets/CodeCrafte.pdf"
           download
-          class="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition"
-        >
+          class="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition" aria-label="Download-cv">
           <i class="fa-solid fa-download mr-2"></i> Download CV
         </a>
         <a
-          href="#contact"
-          class="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition"
-        >
+          href="contact.html"
+          class="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition" aria-label="Hire Me">
           <i class="fa-solid fa-paper-plane mr-2"></i> Hire Me
         </a>
       </div>
   
        <!-- Social Icons -->
     <div class="flex justify-center space-x-6 mb-6 text-blue-600 dark:text-blue-400 text-xl">
-        <a href="https://github.com" target="_blank" class="hover:text-blue-800"><i class="fa-brands fa-github"></i></a>
-        <a href="https://linkedin.com/in/your-linkedin" target="_blank" class="hover:text-blue-800"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="#contact" class="hover:text-blue-800"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://github.com" target="_blank" class="hover:text-blue-800" aria-label="github"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com/in/your-linkedin" target="_blank" class="hover:text-blue-800" aria-label="linkedin"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="contact.html" class="hover:text-blue-800" aria-label="contact"><i class="fa-solid fa-envelope"></i></a>
       </div>
   
       <!-- Project Stats -->
@@ -140,7 +191,7 @@
       </div>
        <!-- Scroll Down -->
     <div class="mt-10">
-        <a href="#about" class="text-blue-500 dark:text-blue-400 animate-bounce">
+        <a href="#about" class="text-blue-500 dark:text-blue-400 animate-bounce" aria-label="about">
           <i class="fa-solid fa-angles-down text-2xl"></i>
         </a>
       </div>
@@ -159,8 +210,8 @@
           <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             I'm CodeCrafter, a passionate Front-end Developer with a strong focus on building clean, modern, and user-friendly web interfaces...
           </p>
-          <a href="about.html" class="mt-6 inline-block px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
-            Read More
+          <a href="about.html"  aria-label="Learn more about CodeCrafter, the front-end developer" title="Go to About Page" class="mt-6 inline-block px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
+            Learn more about CodeCrafter
           </a>
         </div>
       </section>
@@ -181,35 +232,35 @@
         <div class="flex animate-marquee space-x-14 hover:[animation-play-state:paused] w-max">
           <!-- Skill Item -->
           <div class="flex flex-col items-center gap-2">
-            <img src="images/html-icon.jpg" alt="HTML5" class="w-28 h-28 mx-auto" />
+            <img src="images/html-icon.jpg" alt="HTML5 image icon" class="w-28 h-28 mx-auto" />
             <span class="text-sm font-semibold text-gray-800 dark:text-gray-200">HTML5</span>
           </div>
           <div class="flex flex-col items-center gap-2">
-            <img src="images/CSS.jpg" alt="CSS3" class="w-28 h-28 mx-auto" />
+            <img src="images/CSS.jpg" alt="CSS3 image icon" class="w-28 h-28 mx-auto" />
             <span class="text-sm font-semibold text-gray-800 dark:text-gray-200">CSS3</span>
           </div>
           <div class="flex flex-col items-center gap-2">
-            <img src="images/bootstrap.jpg" alt="Bootstrap" class="w-28 h-28 mx-auto" />
+            <img src="images/bootstrap.jpg" alt="Bootstrap image icon" class="w-28 h-28 mx-auto" />
             <span class="text-sm font-semibold text-gray-800 dark:text-gray-200">Bootstrap</span>
           </div>
           <div class="flex flex-col items-center gap-2">
-            <img src="images/tailwind-icon.jpg" alt="Tailwind CSS" class="w-28 h-28 mx-auto" />
+            <img src="images/tailwind-icon.jpg" alt="Tailwind CSS image icon" class="w-28 h-28 mx-auto" />
             <span class="text-sm font-semibold text-gray-800 dark:text-gray-200">Tailwind CSS</span>
           </div>
           <div class="flex flex-col items-center gap-2">
-            <img src="images/js-icon.jpg" alt="JavaScript" class="w-28 h-28 mx-auto" />
+            <img src="images/js-icon.jpg" alt="JavaScript image icon" class="w-28 h-28 mx-auto" />
             <span class="text-sm font-semibold text-gray-800 dark:text-gray-200">JavaScript</span>
           </div>
           <div class="flex flex-col items-center gap-2">
-            <img src="images/github-icon.jpg" alt="GitHub" class="w-28 h-28 mx-auto" />
+            <img src="images/github-icon.jpg" alt="GitHub image icon" class="w-28 h-28 mx-auto" />
             <span class="text-sm font-semibold text-gray-800 dark:text-gray-200">GitHub</span>
           </div>
           <div class="flex flex-col items-center gap-2">
-            <img src="images/figma-icon.jpg" alt="Figma" class="w-28 h-28 mx-auto" />
+            <img src="images/figma-icon.jpg" alt="Figma image icon" class="w-28 h-28 mx-auto" />
             <span class="text-sm font-semibold text-gray-800 dark:text-gray-200">Figma</span>
           </div>
           <div class="flex flex-col items-center gap-2">
-            <img src="images/ux-ui-icon.jpg" alt="UI/UX" class="w-28 h-28 mx-auto" />
+            <img src="images/ux-ui-icon.jpg" alt="UI/UX image icon" class="w-28 h-28 mx-auto" />
             <span class="text-sm font-semibold text-gray-800 dark:text-gray-200">UI/UX</span>
           </div>
         </div>
@@ -234,15 +285,15 @@
       <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         <!-- Project Card 1 -->
         <div class="bg-white dark:bg-gray-800 shadow-xl rounded-xl overflow-hidden transform hover:-translate-y-2 hover:shadow-2xl transition duration-300" data-aos="zoom-in">
-          <img src="images/portfolio-website.jpg" alt="Project 1" class="w-full h-48 object-cover">
+          <img src="images/portfolio-website.jpg" alt="portfolio-website image" class="w-full h-48 object-cover">
           <div class="p-6">
             <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Portfolio Website</h3>
             <p class="text-gray-600 dark:text-gray-300 mb-4">A modern, responsive personal portfolio built with HTML, Tailwind CSS, and JavaScript.</p>
             <div class="flex justify-center gap-4">
-              <a href="#" target="_blank" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+              <a href="#" target="_blank" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition" aria-label="live Preview">
                 Live Preview
               </a>
-              <a href="#" target="_blank" class="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition">
+              <a href="#" target="_blank" class="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition" aria-label="github">
                 GitHub
               </a>
             </div>
@@ -251,15 +302,15 @@
   
         <!-- Project Card 2 -->
         <div class="bg-white dark:bg-gray-800 shadow-xl rounded-xl overflow-hidden transform hover:-translate-y-2 hover:shadow-2xl transition duration-300" data-aos="zoom-in" data-aos-delay="100">
-          <img src="images/restaurant-landing-page.jpg" alt="Project 2" class="w-full h-48 object-cover">
+          <img src="images/restaurant-landing-page.jpg" alt="restaurant-landing-page image" class="w-full h-48 object-cover">
           <div class="p-6">
             <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Restaurant Landing Page</h3>
             <p class="text-gray-600 dark:text-gray-300 mb-4">A creative, scroll-animated, dark-mode landing page for a restaurant brand.</p>
             <div class="flex justify-center gap-4">
-              <a href="#" target="_blank" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+              <a href="#" target="_blank" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition" aria-label="live Preview">
                 Live Preview
               </a>
-              <a href="#" target="_blank" class="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition">
+              <a href="#" target="_blank" class="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition" aria-label="github">
                 GitHub
               </a>
             </div>
@@ -268,15 +319,15 @@
   
         <!-- Project Card 3 -->
         <div class="bg-white dark:bg-gray-800 shadow-xl rounded-xl overflow-hidden transform hover:-translate-y-2 hover:shadow-2xl transition duration-300" data-aos="zoom-in" data-aos-delay="200">
-          <img src="images/e-commerce-landing-page.jpg" alt="Project 3" class="w-full h-48 object-cover">
+          <img src="images/e-commerce-landing-page.jpg" alt="e-commerce-landing-page image" class="w-full h-48 object-cover">
           <div class="p-6">
             <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">E-commerce Template</h3>
             <p class="text-gray-600 dark:text-gray-300 mb-4">An elegant dropshipping store frontend with category filtering and mobile optimization.</p>
             <div class="flex justify-center gap-4">
-              <a href="#" target="_blank" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+              <a href="#" target="_blank" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition" aria-label="live Preview">
                 Live Preview
               </a>
-              <a href="#" target="_blank" class="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition">
+              <a href="#" target="_blank" class="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition" aria-label="github">
                 GitHub
               </a>
             </div>
@@ -285,7 +336,7 @@
       </div>
       <!-- View More Button -->
       <div class="mt-12 text-center" data-aos="fade-up">
-        <a href="portfolio.html" class="inline-block px-6 py-3 text-white bg-blue-600 hover:bg-blue-700 rounded-lg text-lg transition">
+        <a href="portfolio.html" class="inline-block px-6 py-3 text-white bg-blue-600 hover:bg-blue-700 rounded-lg text-lg transition" aria-label="View More Project">
           View More Projects<i class="fas fa-arrow-right ml-2"></i>
         </a>
       </div>
@@ -357,7 +408,7 @@
         </div>
       </div>
       <div class="text-center mt-8">
-        <a href="services.html" class="inline-block px-6 py-3 bg-blue-600 text-white font-medium rounded-lg shadow hover:bg-blue-700 transition">
+        <a href="services.html" class="inline-block px-6 py-3 bg-blue-600 text-white font-medium rounded-lg shadow hover:bg-blue-700 transition" aria-label="View All Services">
           View All Services
         </a>
       </div>
@@ -383,7 +434,7 @@
                 "Outstanding work! Delivered ahead of schedule and exceeded expectations."
               </p>
               <div class="flex items-center justify-center gap-4 mt-4">
-                <img src="images/watson-.jpg" class="w-16 h-16 rounded-full object-cover mx-auto" />
+                <img src="images/watson-.jpg" alt="watson's image" class="w-16 h-16 rounded-full object-cover mx-auto" />
                 <div class="text-left">
                   <h4 class="font-semibold text-gray-900 dark:text-white">Emily Watson</h4>
                   <span class="text-sm text-gray-500 dark:text-gray-400">CEO, SmartBiz</span>
@@ -397,7 +448,7 @@
                 "Great communication and clean code. Loved working with him!"
               </p>
               <div class="flex items-center justify-center gap-4 mt-4">
-                <img src="images/jason-lee.jpg" class="w-16 h-16 rounded-full object-cover mx-auto" />
+                <img src="images/jason-lee.jpg" alt="jeson's image" class="w-16 h-16 rounded-full object-cover mx-auto" />
                 <div class="text-left">
                   <h4 class="font-semibold text-gray-900 dark:text-white">Jason Lee</h4>
                   <span class="text-sm text-gray-500 dark:text-gray-400">Freelance Designer</span>
@@ -411,7 +462,7 @@
                 "Very professional and dedicated. Highly recommended!"
               </p>
               <div class="flex items-center justify-center gap-4 mt-4">
-                <img src="images/samanta-roy.jpg" class="w-16 h-16 rounded-full object-cover mx-auto" />
+                <img src="images/samanta-roy.jpg" alt="samanta's image" class="w-16 h-16 rounded-full object-cover mx-auto" />
                 <div class="text-left">
                   <h4 class="font-semibold text-gray-900 dark:text-white">Samantha Roy</h4>
                   <span class="text-sm text-gray-500 dark:text-gray-400">Startup Founder</span>
@@ -437,7 +488,7 @@
     <div class="max-w-5xl mx-auto text-center">
       <h2 class="text-3xl font-bold mb-6 text-gray-800 dark:text-white">Have a Project in Mind?</h2>
       <p class="text-gray-600 dark:text-gray-300 mb-8">Let’s work together to bring your ideas to life. Drop a message or contact me directly!</p>
-      <a href="contact.html" class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition">Contact Me</a>
+      <a href="contact.html" class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition" aria-label="Contact Me">Contact Me</a>
     </div>
   </section>
   
@@ -458,7 +509,7 @@
 <section class="py-16 px-4 md:px-10 lg:px-20 bg-gradient-to-r from-[#0f2027] via-[#203a43] to-[#2c5364] text-white text-center rounded-lg shadow-xl my-12">
     <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Start Your Project?</h2>
     <p class="mb-6 text-lg">Let’s build something great together. I'm just one message away!</p>
-    <a href="contact.html" class="inline-block px-6 py-3 bg-white text-blue-700 font-semibold rounded-lg shadow hover:bg-gray-100 transition">Get in Touch</a>
+    <a href="contact.html" class="inline-block px-6 py-3 bg-white text-blue-700 font-semibold rounded-lg shadow hover:bg-gray-100 transition" aria-label="Contact">Get in Touch</a>
   </section>
   
 
@@ -478,20 +529,20 @@
       <div>
         <h4 class="text-xl font-semibold mb-2">Quick Links</h4>
         <ul class="text-gray-400 space-y-2">
-            <li><a href="index.html" class="hover:text-white">Home</a></li>
-            <li><a href="about.html" class="hover:text-white">About</a></li>
-            <li><a href="portfolio.html" class="hover:text-white">Portfolio</a></li>
-          <li><a href="services.html" class="hover:text-white">Services</a></li>
-          <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+            <li><a href="index.html" class="hover:text-white" aria-label="Home">Home</a></li>
+            <li><a href="about.html" class="hover:text-white" aria-label="About">About</a></li>
+            <li><a href="portfolio.html" class="hover:text-white" aria-label="Portfolio">Portfolio</a></li>
+          <li><a href="services.html" class="hover:text-white" aria-label="Services">Services</a></li>
+          <li><a href="contact.html" class="hover:text-white" aria-label="Contact">Contact</a></li>
         </ul>
       </div>
       <div>
         <h4 class="text-xl font-semibold mb-2">Connect</h4>
         <p class="text-gray-400 mb-2">Email: yourmail@example.com</p>
         <div class="flex justify-center md:justify-start gap-4 text-lg">
-          <a href="#" class="hover:text-blue-400"><i class="fab fa-facebook"></i></a>
-          <a href="#" class="hover:text-blue-400"><i class="fab fa-github"></i></a>
-          <a href="#" class="hover:text-blue-400"><i class="fab fa-linkedin"></i></a>
+          <a href="#" class="hover:text-blue-400" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="hover:text-blue-400" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="#" class="hover:text-blue-400" aria-label="linkedin"><i class="fab fa-linkedin"></i></a>
         </div>
       </div>
     </div>
@@ -500,13 +551,15 @@
     <div id="datetime" class="text-center text-sm text-gray-400 mt-2"></div>
   </footer>
   
-      
+
+  
+  <!-- SwiperJS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- Scripts -->
     <script src="js/main.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <!-- Swiper JS CDN (before </body>) -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
       AOS.init();

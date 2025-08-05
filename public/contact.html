@@ -3,30 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Developer Portfolio</title>
+    
+    <title>Contact | Developer Portfolio</title>
+    <meta name="description" content="Get in touch with a professional front-end developer. Contact for freelance web development, responsive design, and portfolio inquiries." />
+    <meta name="keywords" content="Contact, Front-end Developer, Web Developer, Freelance Developer, HTML, CSS, JavaScript, Tailwind CSS, Bootstrap, Developer Portfolio" />
+    <meta name="author" content="Md. Abul Khayer Shuvo" />
+    <meta name="robots" content="index, follow" />
 
-    <!-- Font Awesome CDN -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-    <!-- Swiper CSS CDN -->
-    <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <!-- SwiperJS JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="Contact | Developer Portfolio" />
+    <meta property="og:description" content="Reach out to a skilled front-end developer for your next project or collaboration." />
+    <meta property="og:image" content="https://yourdomain.com/images/contact-preview.png" />
+    <meta property="og:url" content="https://yourdomain.com/contact.html" />
+    <meta property="og:type" content="website" />
 
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
-    <!-- AOS CSS for animation -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+      <!-- Font Awesome CDN -->
+      <link rel="stylesheet"
+       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+   
+       <!-- Swiper CSS CDN -->
+         <link
+         rel="stylesheet"
+         href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+         />
+   
+   
+       <!-- AOS CSS for animation -->
+       <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+   
+       <!-- TailwindCSS -->
+         <link rel="stylesheet" href="css/output.css" />
+   
+       <!-- ✅ Dark mode init before anything else -->
+       <script src="js/darkmode.js"></script>
 
-    <!-- TailwindCSS -->
-    <link rel="stylesheet" href="css/output.css" />
-
-    <!-- ✅ Dark mode init before anything else -->
-    <script src="js/darkmode.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "CodeCrafter",
+        "url": "http://developer-portfolio-tem-plate.netlify.app",
+        "sameAs": [
+          "https://github.com/CodeCrafter",
+          "https://linkedin.com/in/CodeCrafter"
+        ],
+        "jobTitle": "Front-end Developer",
+        "image": "http://developer-portfolio-tem-plate.netlify.app/assets/profile.jpg",
+        "email": "mailto:your-email@example.com"
+      }
+      </script>
   </head>
 
   <body
@@ -44,19 +72,19 @@
 
      <!-- Desktop Menu -->
      <nav class="space-x-6 hidden md:flex">
-       <a href="index.html" class="nav-link hover:text-blue-600 transition">Home</a>
-       <a href="about.html" class="nav-link hover:text-blue-600 transition">About</a>
-       <a href="portfolio.html" class="nav-link hover:text-blue-600 transition">Portfolio</a>
-       <a href="services.html" class="nav-link hover:text-blue-600 transition">Services</a>
-       <a href="contact.html" class="nav-link hover:text-blue-600 transition">Contact</a>
+       <a href="index.html" class="nav-link hover:text-blue-600 transition" aria-label="Home">Home</a>
+       <a href="about.html" class="nav-link hover:text-blue-600 transition" aria-label="About">About</a>
+       <a href="portfolio.html" class="nav-link hover:text-blue-600 transition" aria-label="Portfolio">Portfolio</a>
+       <a href="services.html" class="nav-link hover:text-blue-600 transition" aria-label="Services">Services</a>
+       <a href="contact.html" class="nav-link hover:text-blue-600 transition" aria-label="Contact">Contact</a>
      </nav>
 
      <!-- Dark Toggle & Hamburger -->
      <div class="flex items-center space-x-4">
-       <button id="theme-toggle" class="text-2xl">
+       <button id="theme-toggle" class="text-2xl" aria-label="Toggle-theme">
          <i class="fa-regular fa-moon"></i>
        </button>
-       <button id="menu-toggle" class="text-2xl md:hidden focus:outline-none">
+       <button id="menu-toggle" class="text-2xl md:hidden focus:outline-none" aria-label="Toggle-menu">
          <i class="fas fa-bars"></i>
        </button>
      </div>
@@ -67,11 +95,11 @@
      id="mobile-menu"
      class="md:hidden hidden bg-white dark:bg-gray-800 px-4 pb-4 space-y-2 transition-all duration-300"
    >
-     <a href="index.html" class="nav-link block hover:text-blue-600 transition">Home</a>
-     <a href="about.html" class="nav-link block hover:text-blue-600 transition">About</a>
-     <a href="portfolio.html" class="nav-link block hover:text-blue-600 transition">Portfolio</a>
-     <a href="services.html" class="nav-link block hover:text-blue-600 transition">Services</a>
-     <a href="contact.html" class="nav-link block hover:text-blue-600 transition">Contact</a>
+     <a href="index.html" class="nav-link block hover:text-blue-600 transition" aria-label="Home">Home</a>
+     <a href="about.html" class="nav-link block hover:text-blue-600 transition" aria-label="About">About</a>
+     <a href="portfolio.html" class="nav-link block hover:text-blue-600 transition" aria-label="Portfolio">Portfolio</a>
+     <a href="services.html" class="nav-link block hover:text-blue-600 transition" aria-label="Services">Services</a>
+     <a href="contact.html" class="nav-link block hover:text-blue-600 transition" aria-label="Contact">Contact</a>
  </div>
  </header>
  <!-- Navbar End -->
@@ -116,7 +144,7 @@
   
             <div>
               <button type="submit"
-                class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-semibold shadow-lg transition-all duration-300">
+                class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-semibold shadow-lg transition-all duration-300" aria-label="Send Message">
                 Send Message <i class="fas fa-paper-plane ml-2"></i>
               </button>
             </div>
@@ -144,20 +172,20 @@
       <div>
         <h4 class="text-xl font-semibold mb-2">Quick Links</h4>
         <ul class="text-gray-400 space-y-2">
-            <li><a href="index.html" class="hover:text-white">Home</a></li>
-            <li><a href="about.html" class="hover:text-white">About</a></li>
-            <li><a href="portfolio.html" class="hover:text-white">Portfolio</a></li>
-          <li><a href="services.html" class="hover:text-white">Services</a></li>
-          <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+            <li><a href="index.html" class="hover:text-white" aria-label="Home">Home</a></li>
+            <li><a href="about.html" class="hover:text-white" aria-label="About">About</a></li>
+            <li><a href="portfolio.html" class="hover:text-white" aria-label="Portfolio">Portfolio</a></li>
+          <li><a href="services.html" class="hover:text-white" aria-label="Services">Services</a></li>
+          <li><a href="contact.html" class="hover:text-white" aria-label="Contact">Contact</a></li>
         </ul>
       </div>
       <div>
         <h4 class="text-xl font-semibold mb-2">Connect</h4>
         <p class="text-gray-400 mb-2">Email: yourmail@example.com</p>
         <div class="flex justify-center md:justify-start gap-4 text-lg">
-          <a href="#" class="hover:text-blue-400"><i class="fab fa-facebook"></i></a>
-          <a href="#" class="hover:text-blue-400"><i class="fab fa-github"></i></a>
-          <a href="#" class="hover:text-blue-400"><i class="fab fa-linkedin"></i></a>
+          <a href="#" class="hover:text-blue-400" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="hover:text-blue-400" aria-label="github"><i class="fab fa-github"></i></a>
+          <a href="#" class="hover:text-blue-400" aria-label="linkedin"><i class="fab fa-linkedin"></i></a>
         </div>
       </div>
     </div>
@@ -171,8 +199,6 @@
     <script src="js/main.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <!-- Swiper JS CDN (before </body>) -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
       AOS.init();
